@@ -1,0 +1,17 @@
+<html>
+<head>
+<title>Image Upload</title>
+</head>
+<body>
+<h1>Image Upload</h1>
+<form method="POST" action="/upload" enctype="multipart/form-data">
+<input type="file" name="image" accept="image/*">
+<input type="submit" value="Upload">
+</form>
+{% if image %}
+<img src="{{ image }}" alt="Uploaded Image">
+<p>Mean pixel value: {{ mean }}</p>
+<p>gpt val: {{ gpt_val }}</p>
+{% endif %}
+</body>
+</html>
